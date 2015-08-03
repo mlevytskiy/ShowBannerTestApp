@@ -25,13 +25,13 @@ public class ScreenOnReceiver extends BroadcastReceiver {
         }, TimeUnit.MINUTES.toMillis(DELAY_AFTER_SCREEN_ON));
     }
 
-    private void showBanner(Context context) {
+    private void showBanner(final Context context) {
         if (App.instance.isActive) {
             handler.removeCallbacksAndMessages(null);
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-
+                    showBanner(context);
                 }
             }, TimeUnit.MINUTES.toMillis(DELAY_WHEN_OUR_APP_ACTIVE));
         } else {

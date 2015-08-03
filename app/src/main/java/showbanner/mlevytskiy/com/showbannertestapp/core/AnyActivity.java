@@ -1,6 +1,7 @@
 package showbanner.mlevytskiy.com.showbannertestapp.core;
 
 import android.app.Activity;
+import android.view.View;
 
 import showbanner.mlevytskiy.com.showbannertestapp.App;
 
@@ -17,6 +18,10 @@ public class AnyActivity extends Activity {
     public void onStop() {
         super.onStop();
         getApp().isActive = false;
+    }
+
+    public void onClickClose(View view) {
+        this.finish();
     }
 
     private App getApp() {
