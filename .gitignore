@@ -1,0 +1,15 @@
+# Gradle
+.gradle
+build
+
+# IDEA
+out
+.idea
+*.iml
+
+# OS junk
+.DS_Store
+*~
+
+# Local properties
+local.properties
